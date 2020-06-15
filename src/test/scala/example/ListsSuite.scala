@@ -97,9 +97,9 @@ import org.junit.Assert.assertEquals
     assert(sum(List(1,2,0)) == 3)
   }
 
-  // @Test def `max of a few numbers (10pts)`: Unit = {
-  //   assert(max(List(3, 7, 2)) == 7)
-  // }
+  @Test def `max of a few numbers (10pts)`: Unit = {
+    assert(max(List(3, 7, 2)) == 7)
+  }
 
 
 

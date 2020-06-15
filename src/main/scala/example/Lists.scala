@@ -40,9 +40,15 @@ object Lists {
    * @return The largest element in `xs`
    * @throws java.util.NoSuchElementException if `xs` is an empty list
    */
-  // def max(xs: List[Int]): Int = {
-  //   if (xs.isEmpty) thrown new NoSuchElementException();
+  def max(xs: List[Int]): Int = {
+    if (xs.isEmpty) throw new NoSuchElementException();
+    max2(xs)
+  }
 
-
-  // }
+  def max2(xs: List[Int]): Int = {
+    val head:Int = xs.head
+    val tail:List[Int] = xs.tail
+    if (tail.isEmpty || head > max2(tail)) head
+    else max2(tail)
+  }
 }
